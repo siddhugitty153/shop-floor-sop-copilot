@@ -68,8 +68,31 @@ flowchart TD
 
 ## 🚀 Quick Start & Setup Guide
 
-> 📖 **Looking for step-by-step instructions and where to put API keys?**  
-> Check the dedicated [**`SETUP.md`**](SETUP.md) for full configuration details!
+> 📖 **Full Setup Documentation:** See [**`SETUP.md`**](SETUP.md) for comprehensive network and offline details.
+
+### 🔑 Where to Put Your LLM API Key
+
+The copilot backend reads credentials from **`backend/.env`**.
+
+1. Copy the provided template to create your `.env` file:
+   ```bash
+   # Windows:
+   copy backend\.env.example backend\.env
+
+   # macOS / Linux:
+   cp backend/.env.example backend/.env
+   ```
+2. Open **`backend/.env`** and paste your API key:
+   ```env
+   LLM_PROVIDER=gemini
+   GEMINI_API_KEY=AIzaSyYourGeminiApiKeyHere
+   ```
+   *(Get a free key in 30 seconds at [Google AI Studio](https://aistudio.google.com/app/apikey)).*
+
+> [!TIP]
+> **No API Key?** Set `LLM_PROVIDER=extractive` in `backend/.env` to run the copilot 100% offline using its built-in deterministic rule engine! You can also use local neural models like **LM Studio** (`LLM_PROVIDER=lmstudio`) or **Ollama** (`LLM_PROVIDER=ollama`).
+
+---
 
 ### Option A: 1-Click Desktop Launcher (Windows)
 Double-click **`start_copilot.bat`** in the project root. It opens two dedicated desktop command windows that will keep running persistently without being interrupted:
