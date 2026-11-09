@@ -12,7 +12,8 @@ class Settings(BaseSettings):
     SIMILARITY_THRESHOLD: float = 0.085
     TOP_K: int = 4
 
-    LLM_PROVIDER: str = "extractive"  # "ollama", "groq", "extractive"
+    LLM_PROVIDER: str = "gemini"  # "gemini", "lmstudio", "ollama", "groq", "extractive"
+    LM_STUDIO_BASE_URL: str = "http://localhost:1234/v1"
     OLLAMA_BASE_URL: str = "http://localhost:11434"
     OLLAMA_MODEL: str = "llama3.2:3b"
 

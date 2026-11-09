@@ -34,8 +34,8 @@ class SOPRetriever:
         q_sparse = self.vectorizer.transform([question])
         q_vec = np.ascontiguousarray(q_sparse.toarray(), dtype=np.float32)
 
-        # Search wider pool if category filtering is active
-        search_k = min(len(self.metadata), settings.TOP_K * 4)
+        # Search all available chunks in the corpus
+        search_k = len(self.metadata)
         scores, indices = self.index.search(q_vec, search_k)
 
         results: list[SourceCitation] = []
@@ -59,7 +59,7 @@ class SOPRetriever:
                     score=round(float(score), 3)
                 )
             )
-            if len(results) >= settings.TOP_K:
+            if len(results) >= max(settings.TOP_K, 5):
                 break
 
         return results

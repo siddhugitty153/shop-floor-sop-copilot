@@ -178,6 +178,31 @@ export default function App() {
 
   const PRELOADED_QUESTIONS = [
     {
+      label: "💧 Coolant Concentration",
+      category: "Maintenance",
+      text: "What is the recommended coolant concentration for the TX-200 CNC turning centre?"
+    },
+    {
+      label: "🚨 Alarm AL-104 Action",
+      category: "Maintenance",
+      text: "The machine is showing alarm AL-104. What does it mean and what should the operator do?"
+    },
+    {
+      label: "🔒 Lockout Removal Authority",
+      category: "Safety",
+      text: "Who is allowed to remove a lockout lock from a machine?"
+    },
+    {
+      label: "📏 BH-220 OD Tolerance",
+      category: "Quality",
+      text: "What is the outer diameter tolerance for the BH-220 bearing housing?"
+    },
+    {
+      label: "⏱️ Spindle Runout Frequency",
+      category: "Maintenance",
+      text: "How often should spindle runout be checked, and who does it?"
+    },
+    {
       label: "⚠️ Mandatory LOTO & PPE",
       category: "Safety",
       text: "What are the mandatory Lockout/Tagout (LOTO) and PPE requirements before performing maintenance?"
@@ -188,14 +213,9 @@ export default function App() {
       text: "What is the standard preventive maintenance and lubrication schedule for the shop-floor equipment?"
     },
     {
-      label: "🔍 Out-of-Tolerance Defect Action",
+      label: "🔍 Out-of-Tolerance Defect",
       category: "Quality",
       text: "What are the quality inspection criteria and actions required when an out-of-tolerance defect is detected?"
-    },
-    {
-      label: "⚡ Pressure / Temp Fault Procedure",
-      category: "Maintenance",
-      text: "What steps should a supervisor follow when an abnormal pressure, temperature, or machine fault occurs?"
     },
     {
       label: "🚫 Out-of-Scope (Flight Policy)",

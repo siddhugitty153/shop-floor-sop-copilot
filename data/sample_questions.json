@@ -1,33 +1,72 @@
 [
   {
     "id": 1,
-    "category": "Safety",
-    "question": "What are the mandatory Lockout/Tagout (LOTO) and PPE requirements before performing maintenance?",
-    "expected_answerable": true
+    "category": "Maintenance",
+    "question": "What is the recommended coolant concentration for the TX-200 CNC turning centre?",
+    "expected_answerable": true,
+    "source": "Google Drive Sample Question 1"
   },
   {
     "id": 2,
     "category": "Maintenance",
-    "question": "What is the standard preventive maintenance and lubrication schedule for the shop-floor equipment?",
-    "expected_answerable": true
+    "question": "The machine is showing alarm AL-104. What does it mean and what should the operator do?",
+    "expected_answerable": true,
+    "source": "Google Drive Sample Question 2"
   },
   {
     "id": 3,
-    "category": "Quality",
-    "question": "What are the quality inspection criteria and actions required when an out-of-tolerance defect is detected?",
-    "expected_answerable": true
+    "category": "Safety",
+    "question": "Who is allowed to remove a lockout lock from a machine?",
+    "expected_answerable": true,
+    "source": "Google Drive Sample Question 3"
   },
   {
     "id": 4,
-    "category": "Troubleshooting",
-    "question": "What steps should a supervisor follow when an abnormal pressure, temperature, or machine fault occurs?",
-    "expected_answerable": true
+    "category": "Quality",
+    "question": "What is the outer diameter tolerance for the BH-220 bearing housing?",
+    "expected_answerable": true,
+    "source": "Google Drive Sample Question 4"
   },
   {
     "id": 5,
+    "category": "Maintenance",
+    "question": "How often should spindle runout be checked, and who does it?",
+    "expected_answerable": true,
+    "source": "Google Drive Sample Question 5"
+  },
+  {
+    "id": 6,
+    "category": "Safety",
+    "question": "What are the mandatory Lockout/Tagout (LOTO) and PPE requirements before performing maintenance?",
+    "expected_answerable": true,
+    "source": "Custom Question 1 (Safety)"
+  },
+  {
+    "id": 7,
+    "category": "Maintenance",
+    "question": "What is the standard preventive maintenance and lubrication schedule for the shop-floor equipment?",
+    "expected_answerable": true,
+    "source": "Custom Question 2 (Maintenance PM)"
+  },
+  {
+    "id": 8,
+    "category": "Quality",
+    "question": "What are the quality inspection criteria and actions required when an out-of-tolerance defect is detected?",
+    "expected_answerable": true,
+    "source": "Custom Question 3 (Quality Revisions)"
+  },
+  {
+    "id": 9,
+    "category": "Maintenance",
+    "question": "What steps should a supervisor follow when an abnormal pressure, temperature, or machine fault occurs?",
+    "expected_answerable": true,
+    "source": "Custom Question 4 (Troubleshooting)"
+  },
+  {
+    "id": 10,
     "category": "Out-of-Scope",
     "question": "What is the corporate reimbursement policy for international business class flights and hotel stays?",
-    "expected_answerable": false
+    "expected_answerable": false,
+    "source": "Custom Question 5 (Refusal Test)"
   }
 ]
-
