@@ -1,0 +1,33 @@
+[
+  {
+    "id": 1,
+    "category": "Safety",
+    "question": "What are the mandatory Lockout/Tagout (LOTO) and PPE requirements before performing maintenance?",
+    "expected_answerable": true
+  },
+  {
+    "id": 2,
+    "category": "Maintenance",
+    "question": "What is the standard preventive maintenance and lubrication schedule for the shop-floor equipment?",
+    "expected_answerable": true
+  },
+  {
+    "id": 3,
+    "category": "Quality",
+    "question": "What are the quality inspection criteria and actions required when an out-of-tolerance defect is detected?",
+    "expected_answerable": true
+  },
+  {
+    "id": 4,
+    "category": "Troubleshooting",
+    "question": "What steps should a supervisor follow when an abnormal pressure, temperature, or machine fault occurs?",
+    "expected_answerable": true
+  },
+  {
+    "id": 5,
+    "category": "Out-of-Scope",
+    "question": "What is the corporate reimbursement policy for international business class flights and hotel stays?",
+    "expected_answerable": false
+  }
+]
+
