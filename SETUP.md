@@ -163,3 +163,4 @@ If you have Docker and Docker Compose installed:
 docker-compose up --build
 ```
 Both backend (`:8000`) and frontend (`:5173`) will launch automatically in containers with `./data` volume-mounted.
+

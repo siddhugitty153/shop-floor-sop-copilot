@@ -142,19 +142,15 @@ npm run dev
 
 ### Part B: The 5 Custom Questions (Including Out-of-Scope Refusal)
 
-| # | Custom Question Type | Question | Answerable? | Safety Alert Triggered | Cited Source & Page |
-|:-:|:---|:---|:---:|:---:|:---|
-| **6** | **Safety (LOTO Isolation)** | *What are the mandatory Lockout/Tagout (LOTO) and PPE requirements before performing maintenance?* | `True` | ⚠️ *Always isolate machines as per Lockout/Tagout procedures before maintenance.* | `SAF-SOP-003_Lockout_Tagout_Procedure.pdf` (Page 1), `MNT-MAN-CNC-02` (Page 1) |
-| **7** | **Maintenance (PM Routine)** | *What is the standard preventive maintenance and lubrication schedule for the shop-floor equipment?* | `True` | ⚠️ *Ensure hydraulic pressure is fully bled to zero before opening lines.* | `MNT-MAN-CNC-02_TX-200_Preventive_Maintenance.pdf` (Page 1) |
-| **8** | **Quality (Revision Audit)** | *What are the quality inspection criteria and actions required when an out-of-tolerance defect is detected?* | `True` | *None* | `QC-SOP-014_Rev03` (Page 1), `QC-SOP-014_Rev04` (Page 1-2) |
-| **9** | **Troubleshooting (Alarms)** | *What steps should a supervisor follow when an abnormal pressure, temperature, or machine fault occurs?* | `True` | ⚠️ *Verify Lockout/Tagout (LOTO) isolation before touching equipment.* | `MNT-MAN-CNC-02_TX-200_Preventive_Maintenance.pdf` (Page 2) |
-| **10** | **Out-of-Scope (Refusal)** | *What is the corporate reimbursement policy for international business class flights and hotel stays?* | `False` | *None (Refused)* | **None (Refused - Out of Scope)** |
+As requested by BiztelAI, here are the 5 custom questions developed to test Safety, Maintenance, Quality revisions, Machine Troubleshooting, and Out-of-Scope refusal, along with the copilot's exact grounded responses:
 
-#### Out-of-Scope Refusal Verification:
-> **Question:** *"What is the corporate reimbursement policy for international business class flights and hotel stays?"*  
-> **Copilot Answer:**  
-> *"This information is not found in the provided plant SOPs and manuals. Do not guess procedures—please contact Plant Engineering or your Shift Lead."*  
-> **Sources:** `None (Refused)` | **Latency:** `0ms` (Rejected by cosine threshold guardrail $< 0.085$)
+| # | Question & Category | Answerable? | Copilot Grounded Answer | Cited Source & Page |
+|:-:|:---|:---:|:---|:---|
+| **6** | **Safety (LOTO Isolation):**<br>*What are the mandatory Lockout/Tagout (LOTO) and PPE requirements before performing maintenance?* | `True` | **⚠️ Alert:** *Mandatory Lockout/Tagout (LOTO) required before servicing.*<br>• De-energize main electrical breaker and apply personal lockout padlock with standardized red tag before opening any protective panel `[SAF-SOP-003, Page 1]`.<br>• Mandatory PPE: Safety glasses with side shields, cut-resistant nitrile gloves, and steel-toe boots `[MNT-MAN-CNC-02, Page 1]`.<br>• Bleed residual hydraulic pressure to zero before loosening any fluid coupling `[SAF-SOP-003, Page 2]`. | `SAF-SOP-003_Lockout_Tagout_Procedure.pdf` (Page 1 & 2)<br>`MNT-MAN-CNC-02` (Page 1) |
+| **7** | **Maintenance (PM Schedule):**<br>*What is the standard preventive maintenance and lubrication schedule for the shop-floor equipment?* | `True` | • **Daily:** Check coolant concentration (maintain 6–8%) and way lube oil reservoir level (ISO VG 68) before shift start `[MNT-MAN-CNC-02, Page 1]`.<br>• **Weekly:** Clean chip conveyor tray, inspect pneumatic filter bowl for moisture accumulation `[MNT-MAN-CNC-02, Page 1]`.<br>• **Monthly:** Check spindle runout (0.005 mm max) performed by a maintenance technician `[MNT-MAN-CNC-02, Page 1]`. | `MNT-MAN-CNC-02_TX-200_Preventive_Maintenance.pdf` (Page 1) |
+| **8** | **Quality (Revision Audit):**<br>*What are the quality inspection criteria and actions required when an out-of-tolerance defect is detected?* | `True` | • Under **Revision 04**, inspect lot according to **AQL 1.0 Table II** sampling plan and verify supplier Mill Test Certificate (MTC) `[QC-SOP-014_Rev04, Page 1]`.<br>• If a single dimensional non-conformance is identified (e.g. BH-220 OD outside 90.000 mm ± 0.050 mm), affix a red **HOLD / REJECT** physical tag and log the non-conformance into digital form **QF-07A** `[QC-SOP-014_Rev04, Page 2]`. | `QC-SOP-014_Rev04_Incoming_Material_Inspection.pdf` (Page 1 & 2) |
+| **9** | **Troubleshooting (Fault Alarms):**<br>*What steps should a supervisor follow when an abnormal pressure, temperature, or machine fault occurs?* | `True` | • **Alarm AL-104 (Way lube level low):** Refill reservoir with ISO VG 68 oil to the MAX line and press RESET `[MNT-MAN-CNC-02, Page 2]`.<br>• **Alarm AL-210 (Hydraulic pressure fault):** Verify pressure gauge is between 30–35 bar; check for line leakage before restarting `[MNT-MAN-CNC-02, Page 2]`.<br>• **Alarm AL-412 (Coolant level low):** Add fresh water/soluble oil emulsion mixed to 6–8% concentration `[MNT-MAN-CNC-02, Page 2]`. | `MNT-MAN-CNC-02_TX-200_Preventive_Maintenance.pdf` (Page 2) |
+| **10** | **Out-of-Scope (Mandatory Refusal):**<br>*What is the corporate reimbursement policy for international business class flights and hotel stays?* | `False` | **Strict Refusal (0ms Latency):**<br>*"This information is not found in the provided plant SOPs and manuals. Do not guess procedures—please contact Plant Engineering or your Shift Lead."* | **None (Refused - Out of Scope)**<br>Guardrail rejected (Cosine score $< 0.085$) |
 
 ---
 
